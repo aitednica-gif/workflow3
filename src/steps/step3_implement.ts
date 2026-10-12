@@ -47,7 +47,7 @@ export async function step3_implement(ticket: Ticket, plan: PlanResult): Promise
   console.log(`[Step 3: Implement] Starting for ticket ${ticket.frontmatter.id} with ${plan.tasks.length} tasks`);
 
   const completedTasks: string[] = [];
-  let validationPassed = false;
+  let validationPassed: boolean;
 
   try {
     // Execute each task (in parallel groups by dependency)
